@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fittnes Fusion-Home</title>
+    <title>Fittnes Fusion-Articles</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   </head>
   <body id="home-page">
     <nav class="navbar">
@@ -20,6 +21,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="Workout.html">Workout Routiens</a></li>
           <li><a href="Nutrition.html">Nutrition Guide</a></li>
+          <li><a href="Articles.html"> Wellness Articles</a></li>
           <li><a href="Gallery.html"> Photo Gallery</a></li>
           <li><a href="Contact.html">Contact</a></li>
         </ul>
@@ -53,5 +55,20 @@
         <p>&copy;2024 Fitness fussuin. All rights reserved.</p>
       </div>
     </footer>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if (this.scrollY > 20) {
+            $(".navbar").addClass("Sticky");
+          } else {
+            $(".navbar").removeClass("Sticky");
+          }
+        });
+        $(".menu-btn").click(function () {
+          $(".navbar .menu").toggleClass("active");
+          $(".menu-btn i").toggleClass("active");
+        });
+      });
+    </script>
   </body>
 </html>

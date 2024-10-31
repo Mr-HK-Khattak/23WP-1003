@@ -1,0 +1,598 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 2% 5%;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 0.2vw solid black;
+}
+.navbar .max-width {
+  max-width: 90%;
+  padding: 0 5%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  height: 6vh;
+  border-radius: 50%;
+  transform: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  display: block;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  margin: 0 20px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: darkgoldenrod;
+}
+.menu-btn {
+  font-size: 2em;
+  cursor: pointer;
+  display: none;
+  color: white;
+}
+.navbar.Sticky {
+  padding: 1.5% 4%;
+  background: rgb(60, 63, 63);
+}
+footer {
+  border: 0.2vw solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5% 2%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  position: relative;
+  border: 2px solid black;
+}
+.footer-logo img {
+  height: 5vh;
+  border-radius: 50%;
+  transform: all 0.3s ease;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-bottom: 0.5%;
+}
+.footer-p {
+  max-width: 80%;
+  text-align: center;
+}
+.footer-p p {
+  margin: 0.5% 0;
+}
+body#home-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/workoutbackground.jpg);
+  background-size: cover;
+  background-position: cover;
+  margin: 0;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  color: white;
+}
+#home-page section {
+  padding: 5vh 5vw;
+  border: 2px solid black;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#home-page .welcome-container {
+  position: relative;
+  border: 2px solid;
+  width: 100%;
+  min-height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/workoutbackground.jpg);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#home-page .welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 2vw;
+  color: white;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: 1vh;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+#home-page .welcome h1 {
+  font-size: 4vw;
+  font-weight: 650;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+#home-page .welcome p {
+  margin: 1vh 0;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 1.2vw;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+#home-page .join {
+  width: auto;
+  padding: 2vh 3vw;
+  min-width: 150px;
+  position: relative;
+  margin-top: 2vh;
+  background: rgb(133, 227, 114);
+  color: white;
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid rgb(65, 50, 205);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#home-page .join:hover {
+  background-color: rgb(88, 215, 46);
+  border-color: rgb(39, 39, 247);
+}
+body#Nutrition-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/Nutrition1.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  margin: 0;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+}
+#Nutrition-page section {
+  padding: 5vh 5vw;
+  border: 2px solid black;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#Nutrition-page .nutrition {
+  position: relative;
+  border: 2px solid;
+  width: 100%;
+  min-height: 90vh;
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/workoutbackground.jpg);
+  background-size: cover;
+  background-position: center;*/
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#Nutrition-page .intro,
+.balanced-diet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(225, 255, 255, 0.1);
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 7rem 0;
+  text-align: center;
+  text-align: center;
+}
+#Nutrition-page .intro .introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  top: 60%;
+  height: calc(100vh - 60px);
+  color: white;
+}
+#Nutrition-page .intro .introduction h1 {
+  font-size: 4vw;
+  font-weight: 650;
+  text-transform: uppercase;
+  text-align: center;
+}
+#Nutrition-page .intro .introduction p {
+  margin: 1vh 0;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 1.2vw;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+#Nutrition-page .intro .introduction .discover {
+  width: auto;
+  padding: 2vh 3vw;
+  min-width: 120px;
+  position: relative;
+  margin-top: 2vh;
+  background: rgb(133, 227, 114);
+  color: white;
+  max-width: 180px;
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid rgb(65, 50, 205);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#Nutrition-page .intro .introduction .discover:hover {
+  background-color: #58d72e;
+  border-color: #2727f7;
+}
+#Nutrition-page .balanced-diet .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  top: 60%;
+  height: calc(100vh - 60px);
+  color: white;
+}
+#Nutrition-page .balanced-diet .intro h1 {
+  font-size: 3.5vw;
+  font-weight: 550;
+  text-transform: uppercase;
+  text-align: center;
+}
+#Nutrition-page .balanced-diet .intro p {
+  margin: 1vh 0;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 1.2vw;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+#Nutrition-page .balanced-diet .proteins-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px 0;
+  text-align: center;
+}
+#Nutrition-page .balanced-diet .proteins-category .proteins {
+  flex: 1;
+  padding: 40px;
+}
+#Nutrition-page .balanced-diet .proteins-category .pimages {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  margin: 10px;
+}
+#Nutrition-page .balanced-diet .proteins-category .pimages img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px;
+}
+#Nutrition-page .balanced-diet .carbohydrates-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px 0;
+  text-align: center;
+}
+#Nutrition-page .balanced-diet .carbohydrates-category .carbohydrate {
+  flex: 1;
+  padding: 40px;
+}
+#Nutrition-page .balanced-diet .carbohydrates-category .cimages {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px;
+}
+#Nutrition-page .balanced-diet .carbohydrates-category .cimages img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px;
+}
+#Nutrition-page .balanced-diet .fats-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px 0;
+  text-align: center;
+}
+#Nutrition-page .balanced-diet .fats-category .fats {
+  flex: 1;
+  padding: 40px;
+}
+#Nutrition-page .balanced-diet .fats-category .fimages {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px;
+}
+#Nutrition-page .balanced-diet .fats-category .fimages img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px;
+}
+#Nutrition-page .balanced-diet .vitamins-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px 0;
+  text-align: center;
+}
+#Nutrition-page .balanced-diet .vitamins-category .vitamins {
+  flex: 1;
+  padding: 40px;
+}
+#Nutrition-page .balanced-diet .vitamins-category .vimages {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px;
+}
+#Nutrition-page .balanced-diet .vitamins-category .vimages img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px;
+}
+body#workout-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/Gym.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  margin: 0;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+}
+#workout-page section {
+  padding-top: 7%;
+}
+
+#workout-page .Container-daily,
+.Container-Weekly {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(225, 255, 255, 0.1);
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 7rem 0;
+  text-align: center;
+}
+#workout-page .Container-daily .column1 {
+  flex: 1;
+  padding: 40px;
+}
+#workout-page .Container-daily .column2 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+#workout-page .Container-daily .column2 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 40px;
+  padding: 30px;
+}
+#workout-page .Container-Weekly {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+#workout-page .Container-Weekly .column1 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+#workout-page .Container-Weekly .column1 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 50px;
+  border-radius: 70px;
+}
+#workout-page .Container-Weekly .column2 {
+  flex: 1;
+  padding: 20px;
+}
+#workout-page ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+body#contact-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/fitnessbackground.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+}
+#contact-page section {
+  padding: 5vh 6vw;
+  border: 2px solid black;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#contact-page .contact-container {
+  position: relative;
+  border: 2px solid;
+  max-width: 100%;
+  min-height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/workoutbackground.jpg);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+  gap: 20px;
+}
+#contact-page .contact-us {
+  flex: 1 1 40%;
+  padding: 2rem;
+  align-self: center;
+  margin-top: 7rem;
+}
+#contact-page .contact-us p {
+  font-size: 0.6rem;
+}
+#contact-page .form {
+  flex: 1 1 40%;
+  padding: 2rem;
+  border: 6px solid white;
+  border-radius: 20px;
+  margin-top: 6rem;
+}
+#contact-page .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+#contact-page .form form input,
+textarea {
+  font-size: 1.6vw;
+  padding: 8px;
+  max-width: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+#contact-page .form button {
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  margin-top: 1.6vw;
+  max-width: 200px;
+  width: 100%;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+}
+#contact-page .form button:hover {
+  background-color: aqua;
+}
+body#gallery-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(images/fitnessbackground.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+}
+#gallery-page .container {
+  padding: 5vh 6vw;
+  border: 2px solid white;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: auto;
+}
+
+.transform1 {
+  border: 2px solid black;
+  margin: 9rem;
+  text-align: center;
+  border-radius: 6px;
+}
+.transform1 h1 {
+  font-size: 2vw;
+}
+.transform1 p {
+  font-size: 1.2vw;
+}
+.transform1 img {
+  width: 50%;
+  border-radius: 6px;
+}
