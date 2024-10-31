@@ -117,6 +117,7 @@ body#home-page {
   background-position: center;
   justify-content: center;
   display: flex;
+  background-attachment: fixed;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -175,49 +176,43 @@ body#home-page {
 body#Nutrition-page {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
     url(images/Nutrition1.jpg);
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   margin: 0;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 0;
   color: white;
 }
 #Nutrition-page section {
-  padding: 5vh 5vw;
-  border: 2px solid black;
   box-sizing: border-box;
   overflow: hidden;
 }
 #Nutrition-page .nutrition {
-  position: relative;
-  border: 2px solid;
-  width: 100%;
-  min-height: 90vh;
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-    url(images/workoutbackground.jpg);
-  background-size: cover;
-  background-position: center;*/
-  justify-content: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-#Nutrition-page .intro,
-.balanced-diet {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(225, 255, 255, 0.1);
+  justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
   border-radius: 10px;
-  padding: 10px;
-  margin: 7rem 0;
+  padding: 2rem;
+  gap: 2rem;
+  margin: 0 auto;
   text-align: center;
-  text-align: center;
+  max-width: 90vw;
 }
+#Nutrition-page .intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5rem 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+
 #Nutrition-page .intro .introduction {
   display: flex;
   flex-direction: column;
@@ -225,12 +220,10 @@ body#Nutrition-page {
   width: 100%;
   justify-content: center;
   text-align: center;
-  top: 60%;
-  height: calc(100vh - 60px);
   color: white;
 }
 #Nutrition-page .intro .introduction h1 {
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: 650;
   text-transform: uppercase;
   text-align: center;
@@ -239,7 +232,7 @@ body#Nutrition-page {
   margin: 1vh 0;
   font-weight: 400;
   line-height: 1.5em;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   overflow-wrap: break-word;
   text-align: center;
 }
@@ -264,6 +257,16 @@ body#Nutrition-page {
   background-color: #58d72e;
   border-color: #2727f7;
 }
+#Nutrition-page .balanced-diet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
 #Nutrition-page .balanced-diet .intro {
   display: flex;
   flex-direction: column;
@@ -271,8 +274,6 @@ body#Nutrition-page {
   width: 100%;
   justify-content: center;
   text-align: center;
-  top: 60%;
-  height: calc(100vh - 60px);
   color: white;
 }
 #Nutrition-page .balanced-diet .intro h1 {
@@ -289,138 +290,67 @@ body#Nutrition-page {
   overflow-wrap: break-word;
   text-align: center;
 }
-#Nutrition-page .balanced-diet .proteins-category {
+#Nutrition-page .categories {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
   border-radius: 10px;
-  padding: 40px;
-  margin: 20px 0;
-  text-align: center;
-}
-#Nutrition-page .balanced-diet .proteins-category .proteins {
-  flex: 1;
-  padding: 40px;
-}
-#Nutrition-page .balanced-diet .proteins-category .pimages {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
   padding: 10px;
-  justify-content: center;
-  margin: 10px;
-}
-#Nutrition-page .balanced-diet .proteins-category .pimages img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 10px;
-}
-#Nutrition-page .balanced-diet .carbohydrates-category {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  padding: 40px;
-  margin: 20px 0;
+  gap: 0;
+  margin-top: 0;
   text-align: center;
+  max-width: 90vw;
 }
-#Nutrition-page .balanced-diet .carbohydrates-category .carbohydrate {
-  flex: 1;
-  padding: 40px;
-}
-#Nutrition-page .balanced-diet .carbohydrates-category .cimages {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 10px;
-}
-#Nutrition-page .balanced-diet .carbohydrates-category .cimages img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 10px;
-}
-#Nutrition-page .balanced-diet .fats-category {
+
+#Nutrition-page .categories .proteins-category {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  padding: 40px;
-  margin: 20px 0;
-  text-align: center;
+  padding: 2vh 2vw;
 }
-#Nutrition-page .balanced-diet .fats-category .fats {
-  flex: 1;
-  padding: 40px;
-}
-#Nutrition-page .balanced-diet .fats-category .fimages {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 10px;
-}
-#Nutrition-page .balanced-diet .fats-category .fimages img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 10px;
-}
-#Nutrition-page .balanced-diet .vitamins-category {
+
+#Nutrition-page .categories .carbohydrates-category {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  padding: 40px;
-  margin: 20px 0;
-  text-align: center;
+  padding: 2vh 2vw;
 }
-#Nutrition-page .balanced-diet .vitamins-category .vitamins {
-  flex: 1;
-  padding: 40px;
+
+#Nutrition-page .categories .fats-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 2vw;
 }
-#Nutrition-page .balanced-diet .vitamins-category .vimages {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 10px;
+#Nutrition-page .categories .fats-category .fats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 2vw;
 }
-#Nutrition-page .balanced-diet .vitamins-category .vimages img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 10px;
+
+#Nutrition-page .categories .vitamins-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 2vw;
 }
+
 body#workout-page {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
     url(images/Gym.jpg);
-  background-size: 100% 100%;
+  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   margin: 0;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 0;
   color: white;
 }
 #workout-page section {
-  padding-top: 7%;
+  padding-top: 7vh;
 }
 
 #workout-page .Container-daily,
@@ -431,48 +361,51 @@ body#workout-page {
   background: rgba(225, 255, 255, 0.1);
   flex-wrap: wrap;
   border-radius: 10px;
-  padding: 40px;
-  margin: 7rem 0;
+  padding: 4vh 3vw;
+  margin: 9vh auto;
   text-align: center;
+  max-width: 90vw;
 }
 #workout-page .Container-daily .column1 {
-  flex: 1;
-  padding: 40px;
+  flex: 1 1 60%;
+  padding: 4vh 3vw;
 }
 #workout-page .Container-daily .column2 {
-  flex: 1;
+  flex: 1 1 60%;
   display: flex;
+  padding: 5vh 5vw;
   flex-wrap: wrap;
-  padding: 10px;
 }
 #workout-page .Container-daily .column2 img {
-  width: 100%;
+  width: 80%;
   height: auto;
-  object-fit: contain;
-  border-radius: 40px;
-  padding: 30px;
+  object-fit: cover;
+  padding: 3vh;
+  border-radius: 2vh;
+  margin: 0 auto;
 }
 #workout-page .Container-Weekly {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 2vh 2vw;
 }
 #workout-page .Container-Weekly .column1 {
-  flex: 1;
+  flex: 1 1 60%;
   display: flex;
+  padding: 2vh 2vw;
   flex-wrap: wrap;
-  padding: 10px;
 }
 #workout-page .Container-Weekly .column1 img {
-  width: 100%;
+  width: 80%;
   height: auto;
-  object-fit: contain;
-  padding: 50px;
-  border-radius: 70px;
+  object-fit: cover;
+  padding: 3vh;
+  border-radius: 2vh;
+  margin: 0 auto;
 }
 #workout-page .Container-Weekly .column2 {
-  flex: 1;
-  padding: 20px;
+  flex: 1 1 60%;
+  padding: 2vh 3vw;
 }
 #workout-page ul,
 li {
@@ -485,6 +418,7 @@ body#contact-page {
   background-size: cover;
   background-position: center;
   margin: 0;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   min-height: 100vh;
   color: white;
@@ -506,6 +440,7 @@ body#contact-page {
   background-position: center;
   justify-content: center;
   display: flex;
+  background-attachment: fixed;
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
@@ -568,29 +503,39 @@ body#gallery-page {
   background-size: cover;
   background-position: center;
   margin: 0;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   min-height: 100vh;
   color: white;
 }
 #gallery-page .container {
-  padding: 5vh 6vw;
+  padding: 15vh 4vw;
   border: 2px solid white;
   box-sizing: border-box;
   overflow: hidden;
   margin: auto;
+  max-width: 99vw;
 }
 
 .transform1 {
   border: 2px solid black;
-  margin: 9rem;
+  margin: 0 auto;
   text-align: center;
   border-radius: 6px;
+  position: relative;
+  max-width: 85%;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4vh 3vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  gap: 2vh;
 }
 .transform1 h1 {
   font-size: 2vw;
 }
 .transform1 p {
-  font-size: 1.2vw;
+  font-size: 1.5vw;
 }
 .transform1 img {
   width: 50%;
