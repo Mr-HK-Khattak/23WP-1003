@@ -368,7 +368,7 @@ body#workout-page {
 }
 #workout-page .Container-daily .column1 {
   flex: 1 1 60%;
-  padding: 2vh 2vw;
+  padding: 4vh 3vw;
 }
 #workout-page .Container-daily .column2 {
   flex: 1 1 60%;
